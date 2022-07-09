@@ -1,9 +1,6 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from pathlib import Path
-import os
-from bellbankdisburse import settings
-
 
 def update_payment(case_id):
 
