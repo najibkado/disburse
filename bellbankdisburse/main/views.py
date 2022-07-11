@@ -4,12 +4,15 @@ from django.http import HttpResponse, JsonResponse
 from . import disburse
 from django.views.decorators.csrf import csrf_exempt
 import json
+from django.views.decorators.clickjacking import xframe_options_exempt
 
 # Create your views here.
 
+@xframe_options_exempt
 def index(request):
     return render(request, "index.html")
 
+@xframe_options_exempt
 @csrf_exempt
 def payment(request):
     
